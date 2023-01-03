@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hewlett packard E-Invoice</title>
+  <link rel="icon" href="img/hpe logo.png">
+  <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+  <!-- header and header img -->
+  <header>
+    <div class="header-img">
+      <img src="img/invoice logo.jpg" alt="invoice logo" width="350px" height="200px">
+      <img src="img/images.png" alt="car" width="300px" height="150px" align="right" style="margin:20px">
+    </div>
+  </header>
+  <!-- navication bar -->
+  <div class="background">
+    <div class="nav">
+      <ul>
+        <li> <a href="#">E-invoice</a></li>
+      </ul>
+    </div>
+    <!-- table tags  -->
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>s.no</th>
+          <th>Date</th>
+          <th>Invoice No</th>
+          <th>Customer Name</th>
+          <th>Invoice document</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="front">
+          <td>146</td>
+          <td id="yester"></td>
+          <td>E-1600237</td>
+          <td>Anandh</td>
+          <th><button><img src="img/pdf.ico.png" width="40px" hight="40px"></button></th>
+        </tr>
+        <tr class="front">
+          <td>147</td>
+          <td id="yesterd"></td>
+          <td>E-1600238</td>
+          <td>Raja</td>
+          <th><button><img src="img/pdf.ico.png" width="40px" hight="40px"></button></th>
+        </tr>
+        <tr class="front">
+          <td>148</td>
+          <td id="yesterda"></td>
+          <td>E-1600239</td>
+          <td>Jack</td>
+          <th><button><img src="img/pdf.ico.png" width="40px" hight="40px"></button></th>
+        </tr>
+
+        <tr class="back">
+          <td>149</td>
+          <td id="tod"></td>
+          <td>E-1600240</td>
+          <td>Syed</td>
+          <th><button><img src="img/pdf.ico.png" width="40px" hight="40px"></button></th>
+        </tr>
+        <tr class="back">
+          <td>150</td>
+          <td id="toda"></td>
+          <td>E-1600241</td>
+          <td>Shankar</td>
+          <th><button><img src="img/pdf.ico.png" width="40px" hight="40px"></button></th>
+        </tr>
+        <tr class="back">
+          <td>151</td>
+          <td id="today"></td>
+          <td>E-1600242</td>
+          <td>Danial</td>
+          <th><button><img src="img/pdf.ico.png" width="40px" hight="40px"></button></th>
+        </tr>
+
+        <tr class="front">
+          <td>152</td>
+          <td id="today1"></td>
+          <td>E-1600243</td>
+          <td>Trump</td>
+          <th><button><img src="img/pdf.ico.png" width="40px" hight="40px"></button></th>
+        </tr>
+        <tr class="front">
+          <td>153</td>
+          <td id="today2"></td>
+          <td>E-1600244</td>
+          <td>Raman</td>
+          <th><button><img src="img/pdf.ico.png" width="40px" hight="40px"></button></th>
+        </tr>
+        <tr class="front">
+          <td>154</td>
+          <td id="today3"></td>
+          <td>E-1600245</td>
+          <td>Sharma</td>
+          <th><button><img src="img/pdf.ico.png" width="40px" hight="40px"></button></th>
+        </tr>
+      </tbody>
+    </table>
+    <!-- anandh date format -->
+    <script>
+      function formatDate(DateObject) {
+        const parts = {
+          date: DateObject.getDate() - 1,
+          month: DateObject.getMonth() + 1,
+          year: DateObject.getFullYear()
+        };
+        return parts.date + "-" + parts.month + "-" + parts.year;
+      }
+      const myDate = new Date();
+      const myDateFormatted = formatDate(myDate);
+      document.getElementById("yester").innerHTML = myDateFormatted;
+    </script>
+    <script>
+      // raja date object
+      function rajaDate(DateObject) {
+        const parts = {
+          date: DateObject.getDate() - 1,
+          month: DateObject.getMonth() + 1,
+          year: DateObject.getFullYear()
+        };
+        return parts.date + "-" + parts.month + "-" + parts.year;
+      }
+      const myDate1 = new Date();
+      const myDateraja = rajaDate(myDate1);
+      document.getElementById("yesterd").innerHTML = myDateraja;
+    </script>
+    </script>
+    <!-- jack  date object -->
+    <script>
+      function jackDate1(dateObject) {
+        const parts = {
+          date: dateObject.getDate() - 1,
+          month: dateObject.getMonth() + 1,
+          year: dateObject.getFullYear(),
+        };
+
+        return parts.date + "-" + parts.month + "-" + parts.year;
+      }
+      const myDate2 = new Date();
+      const myDatejack = jackDate1(myDate2);
+      document.getElementById("yesterda").innerHTML = myDatejack;
+    </script>
+    <!-- syed date objects -->
+    <script>
+      function syedDate(dateObject) {
+        const parts = {
+          date: dateObject.getDate(),
+          month: dateObject.getMonth() + 1,
+          year: dateObject.getFullYear(),
+        };
+
+        return parts.date + "-" + parts.month + "-" + parts.year;
+      }
+      const myDate3 = new Date();
+      const myDatesyed = syedDate(myDate3);
+      document.getElementById("tod").innerHTML = myDatesyed;
+    </script>
+    <script>
+      // shankar date format
+      function shankarDate(dateObject) {
+        const parts = {
+          date: dateObject.getDate(),
+          month: dateObject.getMonth() + 1,
+          year: dateObject.getFullYear(),
+        };
+
+        return parts.date + "-" + parts.month + "-" + parts.year;
+      }
+      const myDate4 = new Date();
+      const myDateshankar = shankarDate(myDate4);
+      document.getElementById("toda").innerHTML = myDateshankar;
+    </script>
+    <script>
+      // danial date format
+      function danialDate(dateObject) {
+        const parts = {
+          date: dateObject.getDate(),
+          month: dateObject.getMonth() + 1,
+          year: dateObject.getFullYear(),
+        };
+
+        return parts.date + "-" + parts.month + "-" + parts.year;
+      }
+      const myDate5 = new Date();
+      const myDatedanial = danialDate(myDate5);
+      document.getElementById("today").innerHTML = myDatedanial;
+    </script>
+    <script>
+      // trump date format
+      function trumpDate(dateObject) {
+        const parts = {
+          date: dateObject.getDate() + 1,
+          month: dateObject.getMonth() + 1,
+          year: dateObject.getFullYear(),
+        };
+
+        return parts.date + "-" + parts.month + "-" + parts.year;
+      }
+      const myDate6 = new Date();
+      const myDatetrump = trumpDate(myDate6);
+      document.getElementById("today1").innerHTML = myDatetrump;
+    </script>
+    <script>
+      // raman date format
+      function ramanDate(dateObject) {
+        const parts = {
+          date: dateObject.getDate() + 1,
+          month: dateObject.getMonth() + 1,
+          year: dateObject.getFullYear(),
+        };
+
+        return parts.date + "-" + parts.month + "-" + parts.year;
+      }
+      const myDate7 = new Date();
+      const myDateraman = ramanDate(myDate7);
+      document.getElementById("today2").innerHTML = myDateraman;
+    </script>
+    <script>
+      // sharma date format
+      function sharmaDate(dateObject) {
+        const parts = {
+          date: dateObject.getDate() + 1,
+          month: dateObject.getMonth() + 1,
+          year: dateObject.getFullYear(),
+        };
+
+        return parts.date + "-" + parts.month + "-" + parts.year;
+      }
+      const myDate8 = new Date();
+      const myDatesharma = sharmaDate(myDate8);
+      document.getElementById("today3").innerHTML = myDatesharma;
+    </script>
+    <h1>Mail Box</h1>
+    <!-- mail box container -->
+    <div class="container">
+      <img src="img/mail1.jpg" alt="background-img">
+      <!-- mail box input tags -->
+      <p><input class="button" type="button" value="send" />
+        From :<input type="email" value="hewlett-packard-enterprise@hpe.com">
+        To :<input type="email" placeholder="Enter emailID" /><br><br>
+        Cc :<input type="text" placeholder="Enter Cc" /><br><br>
+        Subject ; <input type="text" placeholder="Write Subject" /><br><br>
+        Compose Mail ;<input class="compose" type="text" placeholder="Compose Mail Here" />
+        <input class="file" type="file" placeholder="chooseFile" accept=".pdf">
+      </p>
+    </div>
+    <!-- footer tags -->
+    <footer>
+      <h4>© Copyright 2022 Hewlett Packard Enterprise E-Invoice Development LP</h4>
+    </footer>
+  </div>
+</body>
+
+</html>
